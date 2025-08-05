@@ -115,6 +115,10 @@ test.each([
     },
   },
   {
+    signatures: ['struct Foo { address bar; }', 'Foo'], 
+    expected: { type: 'tuple', components: [{ name: 'bar', type: 'address' }] }
+  },
+  {
     signatures: ['struct Foo { string bar; }', 'Foo indexed foo'],
     expected: {
       type: 'tuple',

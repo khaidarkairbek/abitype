@@ -23,7 +23,7 @@ export function getParameterCacheKey(
       structKey += `(${struct[0]}{${propertyKey}})`
     }
   if (type) return `${type}:${param}${structKey}`
-  return param
+  return `${param}${structKey}`
 }
 
 /**
