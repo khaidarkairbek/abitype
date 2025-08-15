@@ -107,16 +107,16 @@ test.each([
     expected: { type: 'tuple', components: [{ name: 'bar', type: 'string' }] },
   },
   {
+    signatures: ['struct Foo { address bar; }', 'Foo'],
+    expected: { type: 'tuple', components: [{ name: 'bar', type: 'address' }] },
+  },
+  {
     signatures: ['struct Foo { string bar; }', 'Foo foo'],
     expected: {
       type: 'tuple',
       name: 'foo',
       components: [{ name: 'bar', type: 'string' }],
     },
-  },
-  {
-    signatures: ['struct Foo { address bar; }', 'Foo'], 
-    expected: { type: 'tuple', components: [{ name: 'bar', type: 'address' }] }
   },
   {
     signatures: ['struct Foo { string bar; }', 'Foo indexed foo'],
